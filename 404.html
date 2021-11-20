@@ -1,0 +1,116 @@
+<!DOCTYPE html>
+<html>
+  <head>  
+    <title>Error 404 - Page Not Found</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Source+Code+Pro&display=swap" rel="stylesheet">
+    
+    <style>
+      body {
+        background-color: #1c1d25;
+        color: white;
+        font-family: 'Source Code Pro', monospace;
+        text-align: center;
+      }
+    
+      .noscript {
+        text-align: center;
+      }
+
+      noscript {}
+      
+      .wrapper {}
+      
+      .header {}
+      
+      * {
+        box-sizing: border-box;
+      }
+
+      #myInput {
+        background-image: url('/css/searchicon.png');
+        background-position: 10px 12px;
+        background-repeat: no-repeat;
+        width: 100%;
+        font-size: 16px;
+        padding: 12px 20px 12px 40px;
+        border: 1px solid #ddd;
+        margin-bottom: 12px;
+      }
+
+      #myUL {
+        list-style-type: none;
+        padding: 0;
+        margin: 0;
+      }
+
+      #myUL li a {
+        border: 1px solid #ddd;
+        margin-top: -1px; /* Prevent double borders */
+        background-color: #f6f6f6;
+        padding: 12px;
+        text-decoration: none;
+        font-size: 18px;
+        color: black;
+        display: block
+      }
+
+      #myUL li a:hover:not(.header) {
+        background-color: #eee;
+      }
+    </style>
+  </head>
+  <body>
+    <div class="noscript">
+      <noscript>
+        <p>Turn on your Javascript (for no reason) you sussy baka.</p>
+      </noscript>
+    </div>
+    <div class="wrapper">
+      <div class="header">
+        <h1>Peep & Matey Inc.</h1> <br>
+        <h2>Error 404 - Page Not Found</h2>
+      </div>
+      <br>
+      <br>
+      <div class="search">
+            <h2>Lost? Search for some pages</h2>
+
+            <input type="text" id="myInput" onkeyup="myFunction()" placeholder="Search for pages.." title="Type in a name" autocomplete="off">
+
+            <ul id="myUL">
+              <li><a href="https://saisiddhish.github.io">Home</a></li>
+              <li><a href="https://saisiddhish.github.io/pages?page=videos">Videos</a></li>
+
+              <li><a href="https://saisiddhish.github.io/pages?page=posts">Posts</a></li>
+              <li><a href="https://saisiddhish.github.io/pages?page=accom">Accomplishments</a></li>
+              
+              <li><a href="https://saisiddhish.github.io/pages?page=timeline">Timeline</a></li>
+              <li><a href="https://saisiddhish.github.io/pages?page=steam">STEAM Activites</a></li>
+              <li><a href="https://github.com/saisiddhish">GitHub</a></li>
+              <!-- <li><a href="#">Cindy</a></li> -->
+            </ul>
+
+            <script>
+                function myFunction() {
+                    var input, filter, ul, li, a, i, txtValue;
+                    input = document.getElementById("myInput");
+                    filter = input.value.toUpperCase();
+                    ul = document.getElementById("myUL");
+                    li = ul.getElementsByTagName("li");
+                    for (i = 0; i < li.length; i++) {
+                        a = li[i].getElementsByTagName("a")[0];
+                        txtValue = a.textContent || a.innerText;
+                        if (txtValue.toUpperCase().indexOf(filter) > -1) {
+                            li[i].style.display = "";
+                        } else {
+                            li[i].style.display = "none";
+                        }
+                    }
+                }
+            </script>
+        </div>
+    </div>
+  </body>
+</html>
